@@ -58,6 +58,7 @@ const Applayout = (WrappedComponent) => {
     const dispatch = useDispatch();
     const { chatId } = useParams();
 
+
     const {
       mobileChatDialog,
       isDeletemenu,
@@ -137,6 +138,9 @@ const Applayout = (WrappedComponent) => {
     };
     SocketListener(socket, events);
 
+
+
+
     return (
       <>
         <Tittle />
@@ -185,6 +189,7 @@ const Applayout = (WrappedComponent) => {
                 </Typography>
               </Box>
             ) : (
+
               <Chatlist
                 chats={data.chats}
                 chatId={chatId}
@@ -285,7 +290,6 @@ const Applayout = (WrappedComponent) => {
           </Grid>
 
           <ChatContextMenu anchorEl={anchorEl} />
-
           <Suspense fallback={<Backdrop open={true} />}>
             <AskforClear />
           </Suspense>
@@ -298,6 +302,7 @@ const Applayout = (WrappedComponent) => {
     );
   };
 
+  
   ComponentWithLayout.displayName = `Applayout(${getDisplayName(
     WrappedComponent
   )})`;

@@ -66,6 +66,7 @@ const Chat = ({ chatId }) => {
     chatId,
     page,
   });
+  
   useEffect(() => {
     if (databaseMessage.isError) {
       toast.error(databaseMessage.error.data.message);
@@ -151,6 +152,8 @@ const Chat = ({ chatId }) => {
 
         <div ref={endOfMessagesRef} />
       </Stack>
+
+
 
       {/* to send message */}
       <form

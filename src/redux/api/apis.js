@@ -2,8 +2,10 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const chatApi = createApi({
   reducerPath: "chat",
-  // baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/api/v1" }),
-  baseQuery: fetchBaseQuery({ baseUrl: "https://reactchat-backend-yznc.onrender.com/api/v1" }),
+  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3000/api/v1" }),
+
+  
+  // baseQuery: fetchBaseQuery({ baseUrl: "https://reactchat-backend-yznc.onrender.com/api/v1" }),
 
   tagTypes: ["Chat", "User"],
 
